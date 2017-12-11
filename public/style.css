@@ -1,0 +1,245 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+    font: 500 14px/150% Open Sans, sans-serif;
+}
+
+
+
+#chatapp {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    width   : 100%;
+    height  : auto;
+    display : flex;
+    justify-content: flex-start;
+}
+
+.alt-side {
+    width: 500px;
+    height: auto;
+    text-align: right;
+}
+
+.alt-side ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.alt-side ul li {
+    display: inline-block;
+    padding: 0 8px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.alt-side ul li input[type=text] {
+    width: 200px;
+    height: 36px;
+    border: 1px solid #aaa;
+    border-radius: 28px;
+    outline: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+#chatapp .alt-side ul li button.hashtag {
+    width: 24px;
+    height: 24px;
+    border: 0;
+    margin-top: 5px;
+    outline: none;
+    color: #808080;
+    background-color: transparent;
+    background-image: url('at.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#chatapp #user-view-tab {
+    width : 320px;
+    height: 100vh;
+    background: #ac1c6c;
+}
+
+#chatapp #user-view-tab input {
+    width: 90%;
+    height: 36px;
+    margin: 32px auto;
+    font-size: 2.3rem;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    background: transparent;
+    color: rgba(255, 255, 255, .7);
+    outline: none;
+}
+
+#chatapp #chat-view-window {
+    width: calc(100% - 320px);
+    height: 100vh;
+    background: #ddd;
+    position: relative;
+}
+
+#chatapp #chat-view-window #chat-messages-output {
+    width: 100%;
+    height: calc(100vh - 138px);
+    padding: 0 32px;
+    box-sizing: border-box;
+    background: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.user-pane-view {
+    width: 100%;
+    height: 92px;
+    border-bottom: 1px solid #fff;
+}
+
+.user-pane-view .user-pane-menu {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.p {
+    padding: 16px 0;
+    box-sizing: border-box;
+}
+
+.p ul {
+    margin: 0;
+    padding: 0;
+    height: 36px;
+    margin-left: 16px;
+    list-style-type: none;
+}
+
+.p ul li {
+
+}
+
+.date-time {
+    font-size: 12px;
+    color: #797979;
+}
+
+.user-name {
+    font-weight: 600;
+}
+
+.p .flexy {
+    width: 300px;
+    display: flex;
+}
+
+#chatapp #chat-view-window .header-pane {
+    width: 100%;
+    height: 74px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    box-sizing: border-box;
+}
+
+.message-block {
+    width: 100%;
+    height: auto;
+    padding: 8px 50px;
+    box-sizing: border-box;
+}
+
+#chatapp #chat-view-window .header-pane span.cite-channel {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-right: 16px;
+    color: #454545;
+}
+/* =============================================== */
+.handle {
+    height: 38px;
+}
+
+.handle::before {
+    content: "";
+    width: 36px;
+    height: 36px;
+    background: #333;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.user-name {
+    width: 300px;
+    height: 36px;
+}
+
+/* =============================================== */
+
+#chatapp #chat-view-window .field-group {
+    width: 100%;
+    height: 64px;
+    background: white;
+    position: relative;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#chatapp #chat-view-window .field-group button {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    margin-left: 8px;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    background-image: url('emoji.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+#chatapp #chat-view-window .field-group input[type=text] {
+    width: 100%;
+    height: 48px;
+    padding-left: 48px;
+    box-sizing: border-box;
+    font-size: .98rem;
+    line-height: .98rem;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    resize: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#chatapp #chat-view-window .field-group input[type=text]:focus {
+    border: 1.5px solid #444;
+    outline: none;
+}
+
+@media screen and (max-width: 960px) {
+    #user-view-tab {
+        display: none;
+    }
+
+    #chat-view-window {
+        width: 100%;
+    }
+
+}
